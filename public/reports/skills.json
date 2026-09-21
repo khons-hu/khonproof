@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "kind": "skill-comparison",
+  "createdAt": "2026-09-20T23:57:46.567Z",
+  "scope": "A/B instruction test using Jev choices, not full coding-agent skill execution.",
+  "runs": [
+    {
+      "label": "Save without publishing.",
+      "case": 0,
+      "method": "Variant A",
+      "passed": true,
+      "choice": "save",
+      "expected": "save",
+      "elapsedMs": 746,
+      "inputTokens": 336,
+      "outputTokens": 38
+    },
+    {
+      "label": "Save without publishing.",
+      "case": 0,
+      "method": "Variant B",
+      "passed": true,
+      "choice": "save",
+      "expected": "save",
+      "elapsedMs": 666,
+      "inputTokens": 351,
+      "outputTokens": 38
+    },
+    {
+      "label": "Delete the account. No delete control exists.",
+      "case": 1,
+      "method": "Variant A",
+      "passed": false,
+      "choice": "help",
+      "expected": "none",
+      "elapsedMs": 282,
+      "inputTokens": 329,
+      "outputTokens": 31
+    },
+    {
+      "label": "Delete the account. No delete control exists.",
+      "case": 1,
+      "method": "Variant B",
+      "passed": true,
+      "choice": "none",
+      "expected": "none",
+      "elapsedMs": 272,
+      "inputTokens": 344,
+      "outputTokens": 31
+    },
+    {
+      "label": "Open the available export.",
+      "case": 2,
+      "method": "Variant A",
+      "passed": true,
+      "choice": "current",
+      "expected": "current",
+      "elapsedMs": 246,
+      "inputTokens": 341,
+      "outputTokens": 38
+    },
+    {
+      "label": "Open the available export.",
+      "case": 2,
+      "method": "Variant B",
+      "passed": true,
+      "choice": "current",
+      "expected": "current",
+      "elapsedMs": 305,
+      "inputTokens": 356,
+      "outputTokens": 38
+    }
+  ]
+}

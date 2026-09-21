@@ -2,7 +2,7 @@
   "version": 1,
   "kind": "decision-benchmark",
   "createdAt": "2026-09-20T23:55:48.268Z",
-  "scope": "Measured once on 20 authored text-choice tasks. Keyword baseline and Jev 1.13.0. No browser execution or host-model cost included. Development: 01–12, held-out: 13–20. Not a general capability ranking.",
+  "scope": "Measured once on 20 authored text-choice tasks. Keyword baseline and Jev 1.13.0. No browser execution or host-model cost included. Development: 01\u201312, held-out: 13\u201320. Not a general capability ranking. Task 06 is ambiguous without a live loading-state observation. Interpret its failure as a fixture limitation. Task 18 is a Hungarian-label mismatch.",
   "runs": [
     {
       "label": "01 Open the coding practice project.",

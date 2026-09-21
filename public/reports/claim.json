@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "kind": "claim-check",
+  "createdAt": "2026-09-20T23:57:47.284Z",
+  "scope": "Model-assisted evidence review, not fact verification. Original source must still be checked.",
+  "runs": [
+    {
+      "label": "Every browser task passed.",
+      "method": "Jev support check",
+      "passed": false,
+      "verdict": "contradicted",
+      "elapsedMs": 673,
+      "inputTokens": 433,
+      "outputTokens": 47
+    }
+  ]
+}
