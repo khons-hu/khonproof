@@ -49,3 +49,5 @@ The browser course is a sandbox. Its retry button simulates recovery, its “lig
 The site processes imports and drafts in your browser. Only the theme preference is stored locally. Downloaded reports may contain your own text, so review before sharing. Optional CLI Jev calls send the supplied text to TypeSafe. Use public or specifically authorized material.
 
 Vercel builds the static `dist/` directory. Local `.env` and reports are excluded. GitHub Actions runs offline tests and the static build. MIT licensed.
+
+A scheduled GitHub Actions smoke check runs daily at 06:30 UTC without model calls. Reports are kept as workflow artifacts for 14 days. The report bundled with the website is a dated snapshot, not a live status service.

@@ -1,0 +1,23 @@
+name: Public release smoke checks
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm run release
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-release-report
+          path: reports/release.json
+          retention-days: 14

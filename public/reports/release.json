@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "kind": "release-check",
+  "createdAt": "2026-09-21T00:04:10.254Z",
+  "scope": "HTTP and document checks only. Does not verify rendered layout, iOS, forms, or browser interactions.",
+  "runs": [
+    {
+      "label": "Portfolio",
+      "method": "HTTP + HTML smoke",
+      "url": "https://khons-hu.vercel.app/",
+      "passed": true,
+      "checks": {
+        "http": true,
+        "html": true,
+        "markers": true,
+        "viewport": true
+      },
+      "status": 200,
+      "elapsedMs": 166
+    },
+    {
+      "label": "Khonsolve",
+      "method": "HTTP + HTML smoke",
+      "url": "https://thinkroom-khonsu.vercel.app/",
+      "passed": true,
+      "checks": {
+        "http": true,
+        "html": true,
+        "markers": true,
+        "viewport": true
+      },
+      "status": 200,
+      "elapsedMs": 182
+    },
+    {
+      "label": "Khonrelay",
+      "method": "HTTP + HTML smoke",
+      "url": "https://quiet-signal-khonsu.vercel.app/",
+      "passed": true,
+      "checks": {
+        "http": true,
+        "html": true,
+        "markers": true,
+        "viewport": true
+      },
+      "status": 200,
+      "elapsedMs": 358
+    },
+    {
+      "label": "Khonodds",
+      "method": "HTTP + HTML smoke",
+      "url": "https://market-watch-khonsu.vercel.app/",
+      "passed": true,
+      "checks": {
+        "http": true,
+        "html": true,
+        "markers": true,
+        "viewport": true
+      },
+      "status": 200,
+      "elapsedMs": 142
+    },
+    {
+      "label": "Dots",
+      "method": "HTTP + HTML smoke",
+      "url": "https://dots-khonsu.vercel.app/",
+      "passed": true,
+      "checks": {
+        "http": true,
+        "html": true,
+        "markers": true,
+        "viewport": true
+      },
+      "status": 200,
+      "elapsedMs": 115
+    },
+    {
+      "label": "Khonproof",
+      "method": "HTTP + HTML smoke",
+      "url": "https://khonproof.vercel.app/",
+      "passed": false,
+      "checks": {
+        "http": false,
+        "html": false,
+        "markers": false,
+        "viewport": false
+      },
+      "status": 404,
+      "elapsedMs": 115
+    }
+  ]
+}
