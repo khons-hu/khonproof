@@ -1,3 +1,4 @@
+import "./human-ui.mjs";
 import {tasks,candidates,splitFor} from './lib/tasks.mjs';import {groups,validateReport,quoteCheck} from './lib/report.mjs';
 const $=id=>document.getElementById(id),make=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 try{const saved=localStorage.getItem('khonproof-theme');document.documentElement.dataset.theme=saved|| (matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');}catch{}$('theme').onclick=()=>{const next=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=next;try{localStorage.setItem('khonproof-theme',next);}catch{}};

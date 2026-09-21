@@ -4,7 +4,7 @@
 
 Fast is nice. Did it work?
 
-A small test lab I built while trying Jev alongside coding agents. Five tools share a simple report format. No accounts, analytics or API keys in the website.
+A small test lab I built while trying Jev alongside coding agents. Six tools share a simple report format. No accounts, analytics or API keys in the website.
 
 ## The five tools
 
@@ -13,6 +13,7 @@ A small test lab I built while trying Jev alongside coding agents. Five tools sh
 - **Skill Lab:** edit two instruction variants and labelled cases, download a config, run a bounded Jev A/B comparison locally, then import results. This is instruction testing, not execution of arbitrary coding skills.
 - **Release Check:** a fixed-URL HTTP/HTML smoke runner plus a browser QA checklist. Status 200 does not prove a UI works.
 - **Claim Check:** check that a quote exists locally, then optionally use Jev locally to judge support, contradiction or missing evidence. No auto-posting and no claim of guaranteed truth.
+- **Human QA:** a bounded editorial screen for public drafts. It flags possible unsupported claims, vague hype, missing limits and generic voice for human review. It does not detect authorship, verify facts or rewrite your text.
 
 ## Run
 
@@ -31,6 +32,7 @@ npm run bench                       # no model, keyword baseline
 node --env-file=.env scripts/bench.mjs --live
 node --env-file=.env scripts/skills.mjs examples/skills.json
 node --env-file=.env scripts/claims.mjs examples/claim.json
+node --env-file=.env scripts/human.mjs examples/human.json
 npm run release
 ```
 
@@ -43,6 +45,12 @@ The first raw decision run was Jev 18/20 versus a keyword baseline at 14/20. Aft
 Cases 01–12 are tagged development, 13–20 held-out. This initial public set is now visible, so it should not remain your holdout after tuning. Use fresh tasks, repeated runs and independent success checks for stronger conclusions. Median and p95 exclude API-error timings, but errors remain in the success denominator. Token counts are API usage, not measured Codex subscription savings. The keyword baseline measures near-zero runtime rounded to milliseconds.
 
 The browser course is a sandbox. Its retry button simulates recovery, its “light theme” task tests selecting an action, and text inputs check exact values. It does not modify real accounts or send messages. Browser timing includes operator pauses. Navigating away mid-task does not magically turn it into a success.
+
+## A useful loop for skills and experiments
+
+Start with one real decision that a script cannot make reliably. Keep exact rules and browser actions in code. Write a few labelled cases, including a no-match case and at least one expected failure. Compare a short instruction with a more specific one in Skill Lab, then keep the report. Do not tune against cases you plan to call held out.
+
+For public project copy or an X draft, run Claim Check when a source is involved and Human QA for editorial risks. A flag means “look here”, not “change this automatically”. The examples use only public, non-sensitive text. Optional Jev calls are capped by the scripts and are never run from the hosted site.
 
 ## Privacy and deployment
 
