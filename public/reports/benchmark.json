@@ -86,7 +86,9 @@
       "elapsedMs": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "status": "complete"
+      "status": "complete",
+      "excluded": true,
+      "reason": "Text-only case lacks loading-state evidence. Excluded from both methods."
     },
     {
       "label": "07 Recover from the temporary loading error.",
@@ -366,7 +368,9 @@
       "elapsedMs": 258,
       "inputTokens": 405,
       "outputTokens": 38,
-      "status": "complete"
+      "status": "complete",
+      "excluded": true,
+      "reason": "Text-only case lacks loading-state evidence. Excluded from both methods."
     },
     {
       "label": "07 Recover from the temporary loading error.",

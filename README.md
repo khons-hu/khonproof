@@ -38,7 +38,7 @@ Copy `.env.example` to `.env` and add your own TypeSafe key locally. Never uploa
 
 ## Read the results carefully
 
-The first measured decision run was Jev 18/20 versus a keyword baseline at 14/20. One missed task uses Hungarian labels. The other asks to wait for results without a live loading-state observation, so its result is ambiguous. Treat that case as a fixture limitation, not proof of a model failure. No prompt tuning or hidden reruns were used to improve the published score.
+The first raw decision run was Jev 18/20 versus a keyword baseline at 14/20. After excluding the same ambiguous waiting case from both methods, the scored results are 18/19 and 13/19. One missed task uses Hungarian labels. The other asks to wait for results without a live loading-state observation, so its result is ambiguous. Treat that case as a fixture limitation, not proof of a model failure. No prompt tuning or hidden reruns were used to improve the published score.
 
 Cases 01–12 are tagged development, 13–20 held-out. This initial public set is now visible, so it should not remain your holdout after tuning. Use fresh tasks, repeated runs and independent success checks for stronger conclusions. Median and p95 exclude API-error timings, but errors remain in the success denominator. Token counts are API usage, not measured Codex subscription savings. The keyword baseline measures near-zero runtime rounded to milliseconds.
 
