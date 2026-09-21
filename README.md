@@ -33,6 +33,7 @@ node --env-file=.env scripts/bench.mjs --live
 node --env-file=.env scripts/skills.mjs examples/skills.json
 node --env-file=.env scripts/claims.mjs examples/claim.json
 node --env-file=.env scripts/human.mjs examples/human.json
+npm run copy-audit -- ../portfolio ../quiet-signal ../practice-workbench
 npm run release
 ```
 
@@ -51,6 +52,8 @@ The browser course is a sandbox. Its retry button simulates recovery, its “lig
 Start with one real decision that a script cannot make reliably. Keep exact rules and browser actions in code. Write a few labelled cases, including a no-match case and at least one expected failure. Compare a short instruction with a more specific one in Skill Lab, then keep the report. Do not tune against cases you plan to call held out.
 
 For public project copy or an X draft, run Claim Check when a source is involved and Human QA for editorial risks. A flag means “look here”, not “change this automatically”. The examples use only public, non-sensitive text. Optional Jev calls are capped by the scripts and are never run from the hosted site.
+
+`copy-audit` is the cheap first pass for several public project folders. It looks only for a small set of stock marketing phrases. It does not alter files or call a model. Add `--fail` only when you want findings to fail a local check. Review every result in context, then use Human QA only for the short passages that need a semantic check.
 
 ## Privacy and deployment
 
